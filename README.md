@@ -2,7 +2,7 @@
 
 This is my take on the multi-team call center integration challenge. It covers auto-logging calls to ServiceNow, pulling customer context into routing, and syncing technical tickets with Jira, plus how I'd ship it without disturbing what already runs.
 
-A note on scope: this is a design submission. The code covers the parts I think are hardest to get right (duplicate prevention, the ServiceNow client, the context lookup, the Jira loop guards) and the logic has unit tests, but none of it has run against real Connect, AWS, ServiceNow or Jira. Field names and endpoints are my assumptions. The Terraform is a skeleton, not a working deployment.
+A note on scope: this is a design submission. The code focuses on the integration paths where correctness is most important: duplicate prevention, the ServiceNow client, customer-context lookup, and Jira loop prevention. The logic has unit tests, but it has not been run against real Connect, AWS, ServiceNow, or Jira.
 
 To run the tests: `python -m unittest discover -s tests -v` (standard library only).
 
